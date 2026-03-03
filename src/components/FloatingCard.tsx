@@ -14,7 +14,7 @@ const FloatingCard = ({ children, style, delay = 0 }: FloatingCardProps) => (
     transition={{
       duration: 0.6,
       delay: delay,
-      ease: [0.16, 1, 0.3, 1],
+      ease: [0.16, 1, 0.3, 1] as const,
     }}
     style={{
       position: 'absolute',

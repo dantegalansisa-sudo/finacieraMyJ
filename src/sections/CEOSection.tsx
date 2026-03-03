@@ -20,7 +20,7 @@ const CEOSection = () => {
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
           style={{ position: 'relative' }}
           className="ceo-photo-wrap"
         >
@@ -57,7 +57,7 @@ const CEOSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] as const }}
           style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
         >
           <SectionLabel text="NUESTRA CEO" />
