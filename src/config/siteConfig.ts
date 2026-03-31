@@ -494,7 +494,7 @@ export const equipoTrabajo = {
       nombre: 'Rosa Pantaleón',
       cargo: 'Auxiliar de Contabilidad',
       departamento: 'Contabilidad',
-      foto: '/images/foto que falta.jpeg',
+      foto: '/images/Rosa Pantaleon.jpeg',
       telefono: '',
       email: '',
       descripcion: 'Apoya en los procesos contables, registra transacciones financieras y colabora en la preparación de reportes contables.',
