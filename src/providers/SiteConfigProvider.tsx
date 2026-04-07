@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import { doc, onSnapshot } from 'firebase/firestore';
-import { db } from '../firebase/config';
+import { db, firebaseEnabled } from '../firebase/config';
 import type { SiteConfigMap, SiteConfigKey } from '../config/siteConfigTypes';
 
 type ConfigState = {
@@ -25,6 +25,8 @@ export function SiteConfigProvider({ children }: { children: ReactNode }) {
   const [overrides, setOverrides] = useState<ConfigState>({});
 
   useEffect(() => {
+    if (!firebaseEnabled) return;
+
     const unsubscribers = EDITABLE_SECTIONS.map((section) =>
       onSnapshot(
         doc(db, 'siteConfig', section),
