@@ -1,7 +1,8 @@
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { useRef, useState } from 'react';
 import SectionLabel from '../components/SectionLabel';
-import { preguntasFrecuentes, contacto } from '../config/siteConfig';
+import { preguntasFrecuentes } from '../config/siteConfig';
+import { useSiteConfig } from '../hooks/useSiteConfig';
 
 const FAQItem = ({ faq, isOpen, onToggle }: { faq: { q: string; a: string }; isOpen: boolean; onToggle: () => void }) => (
   <div
@@ -81,6 +82,7 @@ const FAQItem = ({ faq, isOpen, onToggle }: { faq: { q: string; a: string }; isO
 );
 
 const FAQSection = () => {
+  const contacto = useSiteConfig('contacto');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
   const [openIndex, setOpenIndex] = useState<number | null>(0);

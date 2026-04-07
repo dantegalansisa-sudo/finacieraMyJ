@@ -12,10 +12,12 @@
   "dependencies": {
     "@playwright/test": "^1.58.2",
     "@tailwindcss/vite": "^4.2.1",
+    "firebase": "^12.11.0",
     "framer-motion": "^12.34.5",
     "jspdf": "^4.2.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-router-dom": "^7.14.0",
     "react-signature-canvas": "^1.1.0-alpha.2",
     "tailwindcss": "^4.2.1"
   },

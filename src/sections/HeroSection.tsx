@@ -1,6 +1,7 @@
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
-import { hero, whatsappUrl } from '../config/siteConfig';
+import { hero } from '../config/siteConfig';
+import { useSiteConfig } from '../hooks/useSiteConfig';
 
 /* ── Ticker Data ── */
 const tickerItems = [
@@ -93,6 +94,8 @@ const slideUp = {
 
 /* ── Hero Section ── */
 const HeroSection = () => {
+  const contacto = useSiteConfig('contacto');
+  const whatsappUrl = `https://wa.me/${contacto.whatsappNumero}?text=${encodeURIComponent(contacto.whatsappMensaje)}`;
   const sectionRef = useRef<HTMLElement>(null);
   const mouseX = useMotionValue(0.5);
   const mouseY = useMotionValue(0.5);

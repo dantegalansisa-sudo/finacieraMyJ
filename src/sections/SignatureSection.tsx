@@ -3,9 +3,12 @@ import { useRef, useState, useCallback, useEffect } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
 import { jsPDF } from 'jspdf';
 import SectionLabel from '../components/SectionLabel';
-import { firmaDigital, servicios, simuladorCuotas, contacto, empresa } from '../config/siteConfig';
+import { firmaDigital, servicios, empresa } from '../config/siteConfig';
+import { useSiteConfig } from '../hooks/useSiteConfig';
 
 const SignatureSection = () => {
+  const simuladorCuotas = useSiteConfig('simuladorCuotas');
+  const contacto = useSiteConfig('contacto');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
   const sigPadRef = useRef<SignatureCanvas>(null);

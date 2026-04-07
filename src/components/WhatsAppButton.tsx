@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
-import { whatsappUrl } from '../config/siteConfig';
+import { useSiteConfig } from '../hooks/useSiteConfig';
 
-const WhatsAppButton = () => (
+const WhatsAppButton = () => {
+  const contacto = useSiteConfig('contacto');
+  const whatsappUrl = `https://wa.me/${contacto.whatsappNumero}?text=${encodeURIComponent(contacto.whatsappMensaje)}`;
+
+  return (
   <motion.a
     href={whatsappUrl}
     target="_blank"
@@ -54,6 +58,7 @@ const WhatsAppButton = () => (
       }
     `}</style>
   </motion.a>
-);
+  );
+};
 
 export default WhatsAppButton;

@@ -1,9 +1,10 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import AnimatedCounter from '../components/AnimatedCounter';
-import { estadisticas } from '../config/siteConfig';
+import { useSiteConfig } from '../hooks/useSiteConfig';
 
 const StatsSection = () => {
+  const estadisticas = useSiteConfig('estadisticas');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 

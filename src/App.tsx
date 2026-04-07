@@ -1,3 +1,4 @@
+import { SiteConfigProvider } from './providers/SiteConfigProvider';
 import UrgencyBanner from './components/UrgencyBanner';
 import Navbar from './components/Navbar';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -23,7 +24,7 @@ import Footer from './sections/Footer';
 
 function App() {
   return (
-    <>
+    <SiteConfigProvider>
       <UrgencyBanner />
       <Navbar />
       <HeroSection />
@@ -45,7 +46,7 @@ function App() {
       <ContactSection />
       <Footer />
       <WhatsAppButton />
-    </>
+    </SiteConfigProvider>
   );
 }
 

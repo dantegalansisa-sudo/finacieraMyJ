@@ -1,9 +1,11 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import SectionLabel from '../components/SectionLabel';
-import { simuladorCuotas, contacto } from '../config/siteConfig';
+import { useSiteConfig } from '../hooks/useSiteConfig';
 
 const LoansSection = () => {
+  const simuladorCuotas = useSiteConfig('simuladorCuotas');
+  const contacto = useSiteConfig('contacto');
   const [selected, setSelected] = useState<number>(simuladorCuotas.montos[0]);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });

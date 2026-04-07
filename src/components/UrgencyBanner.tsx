@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { urgencyBanner, contacto } from '../config/siteConfig';
+import { useSiteConfig } from '../hooks/useSiteConfig';
 
 const UrgencyBanner = () => {
   const [visible, setVisible] = useState(true);
+  const urgencyBanner = useSiteConfig('urgencyBanner');
+  const contacto = useSiteConfig('contacto');
 
   const month = new Date().toLocaleString('es-DO', { month: 'long' });
   const capitalMonth = month.charAt(0).toUpperCase() + month.slice(1);

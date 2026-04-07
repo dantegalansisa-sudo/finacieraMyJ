@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import { empresa, contacto, servicios } from '../config/siteConfig';
+import { empresa, servicios } from '../config/siteConfig';
+import { useSiteConfig } from '../hooks/useSiteConfig';
 
 const Footer = () => {
+  const contacto = useSiteConfig('contacto');
   const footerLinks = servicios.map((s) => ({ label: s.name, href: '#servicios' }));
   const [showPrivacy, setShowPrivacy] = useState(false);
   return (

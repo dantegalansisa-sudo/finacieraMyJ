@@ -1,9 +1,12 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import SectionLabel from '../components/SectionLabel';
-import { empresa, contacto, whatsappUrl, servicios } from '../config/siteConfig';
+import { empresa, servicios } from '../config/siteConfig';
+import { useSiteConfig } from '../hooks/useSiteConfig';
 
 const ContactSection = () => {
+  const contacto = useSiteConfig('contacto');
+  const whatsappUrl = `https://wa.me/${contacto.whatsappNumero}?text=${encodeURIComponent(contacto.whatsappMensaje)}`;
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
   const [formData, setFormData] = useState({

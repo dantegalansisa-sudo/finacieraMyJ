@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { empresa, whatsappUrl } from '../config/siteConfig';
+import { empresa } from '../config/siteConfig';
+import { useSiteConfig } from '../hooks/useSiteConfig';
 
 const navLinks = [
   { label: 'Inicio', href: '#inicio' },
@@ -14,6 +15,8 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const contacto = useSiteConfig('contacto');
+  const whatsappUrl = `https://wa.me/${contacto.whatsappNumero}?text=${encodeURIComponent(contacto.whatsappMensaje)}`;
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 

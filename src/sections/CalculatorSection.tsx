@@ -1,18 +1,19 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState, useMemo } from 'react';
 import SectionLabel from '../components/SectionLabel';
-import { calculadora } from '../config/siteConfig';
-
-const MIN = calculadora.montoMinimo;
-const MAX = calculadora.montoMaximo;
-const STEP = calculadora.incremento;
-const RATE_TOTAL_SEMANAL = calculadora.tasaTotalSemanal;
-const RATE_MENSUAL = calculadora.tasaMensual;
+import { useSiteConfig } from '../hooks/useSiteConfig';
 
 const formatRD = (n: number) =>
   'RD$ ' + n.toLocaleString('es-DO', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
 
 const CalculatorSection = () => {
+  const calculadora = useSiteConfig('calculadora');
+  const MIN = calculadora.montoMinimo;
+  const MAX = calculadora.montoMaximo;
+  const STEP = calculadora.incremento;
+  const RATE_TOTAL_SEMANAL = calculadora.tasaTotalSemanal;
+  const RATE_MENSUAL = calculadora.tasaMensual;
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
   const [monto, setMonto] = useState(calculadora.montoInicial);
