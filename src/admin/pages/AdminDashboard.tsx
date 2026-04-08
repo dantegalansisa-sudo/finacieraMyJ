@@ -6,6 +6,8 @@ const sections = [
   { to: '/admin/simulador', icon: '📊', title: 'Simulador de Cuotas', desc: 'Tablas de pagos para cada monto de préstamo' },
   { to: '/admin/estadisticas', icon: '📈', title: 'Estadísticas', desc: 'Números de clientes, tiempo de aprobación, etc.' },
   { to: '/admin/banner', icon: '📢', title: 'Banner Promocional', desc: 'Texto de la barra promocional verde superior' },
+  { to: '/admin/equipo', icon: '👥', title: 'Equipo de Trabajo', desc: 'Fotos y datos del equipo que se muestran en la web' },
+  { to: '/admin/liderazgo', icon: '👔', title: 'Liderazgo Ejecutivo', desc: 'Foto y datos del presidente y vicepresidenta' },
 ];
 
 export default function AdminDashboard() {

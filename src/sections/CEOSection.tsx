@@ -1,9 +1,10 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import SectionLabel from '../components/SectionLabel';
-import { liderazgo } from '../config/siteConfig';
+import { useSiteConfig } from '../hooks/useSiteConfig';
 
 const CEOSection = () => {
+  const liderazgo = useSiteConfig('liderazgo');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 

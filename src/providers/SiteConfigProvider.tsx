@@ -19,6 +19,8 @@ const EDITABLE_SECTIONS: SiteConfigKey[] = [
   'simuladorCuotas',
   'estadisticas',
   'urgencyBanner',
+  'equipoTrabajo',
+  'liderazgo',
 ];
 
 export function SiteConfigProvider({ children }: { children: ReactNode }) {

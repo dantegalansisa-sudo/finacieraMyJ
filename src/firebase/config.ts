@@ -1,6 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, type Firestore } from 'firebase/firestore';
 import { getAuth, type Auth } from 'firebase/auth';
+import { getStorage, type FirebaseStorage } from 'firebase/storage';
 
 const apiKey = import.meta.env.VITE_FIREBASE_API_KEY;
 
@@ -8,6 +9,7 @@ export const firebaseEnabled = Boolean(apiKey);
 
 let db: Firestore;
 let auth: Auth;
+let storage: FirebaseStorage;
 
 if (firebaseEnabled) {
   const firebaseConfig = {
@@ -21,6 +23,7 @@ if (firebaseEnabled) {
   const app = initializeApp(firebaseConfig);
   db = getFirestore(app);
   auth = getAuth(app);
+  storage = getStorage(app);
 }
 
-export { db, auth };
+export { db, auth, storage };

@@ -1,7 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import SectionLabel from '../components/SectionLabel';
-import { equipoTrabajo } from '../config/siteConfig';
+import { useSiteConfig } from '../hooks/useSiteConfig';
 
 const containerVariants = {
   hidden: {},
@@ -24,6 +24,7 @@ const deptColors: Record<string, string> = {
 };
 
 const EquipoSection = () => {
+  const equipoTrabajo = useSiteConfig('equipoTrabajo');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 

@@ -8,6 +8,8 @@ import AdminCalculadora from './pages/AdminCalculadora';
 import AdminSimulador from './pages/AdminSimulador';
 import AdminEstadisticas from './pages/AdminEstadisticas';
 import AdminBanner from './pages/AdminBanner';
+import AdminEquipo from './pages/AdminEquipo';
+import AdminLiderazgo from './pages/AdminLiderazgo';
 
 export default function AdminLayout() {
   return (
@@ -35,6 +37,8 @@ export default function AdminLayout() {
                 <Route path="simulador" element={<AdminSimulador />} />
                 <Route path="estadisticas" element={<AdminEstadisticas />} />
                 <Route path="banner" element={<AdminBanner />} />
+                <Route path="equipo" element={<AdminEquipo />} />
+                <Route path="liderazgo" element={<AdminLiderazgo />} />
                 <Route path="*" element={<Navigate to="/admin" replace />} />
               </Routes>
             </main>

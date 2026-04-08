@@ -8,6 +8,8 @@ const links = [
   { to: '/admin/simulador', label: 'Simulador de Cuotas', icon: '📊', end: false },
   { to: '/admin/estadisticas', label: 'Estadísticas', icon: '📈', end: false },
   { to: '/admin/banner', label: 'Banner Promo', icon: '📢', end: false },
+  { to: '/admin/equipo', label: 'Equipo', icon: '👥', end: false },
+  { to: '/admin/liderazgo', label: 'Liderazgo', icon: '👔', end: false },
 ];
 
 export default function AdminSidebar() {

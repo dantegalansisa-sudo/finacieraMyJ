@@ -51,6 +51,36 @@ export interface UrgencyBanner {
   whatsappMensaje: string;
 }
 
+export interface MiembroEquipo {
+  nombre: string;
+  cargo: string;
+  departamento: string;
+  foto: string;
+  telefono: string;
+  email: string;
+  descripcion: string;
+}
+
+export interface EquipoTrabajo {
+  titulo: string;
+  subtitulo: string;
+  alertaTexto: string;
+  miembros: MiembroEquipo[];
+}
+
+export interface LiderazgoPersona {
+  nombre: string;
+  cargo: string;
+  bio: string;
+}
+
+export interface Liderazgo {
+  foto: string;
+  fotoAlt: string;
+  presidente: LiderazgoPersona;
+  vicepresidenta: LiderazgoPersona;
+}
+
 // Mapa de secciones editables desde el admin
 export interface SiteConfigMap {
   contacto: Contacto;
@@ -58,6 +88,8 @@ export interface SiteConfigMap {
   simuladorCuotas: SimuladorCuotas;
   estadisticas: Estadistica[];
   urgencyBanner: UrgencyBanner;
+  equipoTrabajo: EquipoTrabajo;
+  liderazgo: Liderazgo;
 }
 
 export type SiteConfigKey = keyof SiteConfigMap;
