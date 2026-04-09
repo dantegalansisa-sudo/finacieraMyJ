@@ -18,6 +18,7 @@ import WhyUsSection from './sections/WhyUsSection';
 import TestimonialsSection from './sections/TestimonialsSection';
 import HistoriasClientesSection from './sections/HistoriasClientesSection';
 import EquipoSection from './sections/EquipoSection';
+import PromoFlyerSection from './sections/PromoFlyerSection';
 import FAQSection from './sections/FAQSection';
 import ContactSection from './sections/ContactSection';
 import Footer from './sections/Footer';
@@ -32,6 +33,7 @@ function App() {
       <RequirementsSection />
       <ServicesSection />
       <StatsSection />
+      <PromoFlyerSection />
       <CalculatorSection />
       <SolicitudSection />
       <SignatureSection />

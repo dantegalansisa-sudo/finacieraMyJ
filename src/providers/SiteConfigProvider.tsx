@@ -21,6 +21,7 @@ const EDITABLE_SECTIONS: SiteConfigKey[] = [
   'urgencyBanner',
   'equipoTrabajo',
   'liderazgo',
+  'promoFlyer',
 ];
 
 export function SiteConfigProvider({ children }: { children: ReactNode }) {

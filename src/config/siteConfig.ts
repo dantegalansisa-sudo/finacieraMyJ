@@ -155,6 +155,11 @@ export const hero = {
 // 5. URGENCY BANNER (barra verde arriba)
 // ─────────────────────────────────────────────
 
+export const promoFlyer = {
+  activo: false,
+  imagenUrl: '',
+};
+
 export const urgencyBanner = {
   // El mes se agrega automáticamente. Cambia solo el texto fijo.
   textoAntes: 'Tasa especial este mes de', // Se agrega el mes después

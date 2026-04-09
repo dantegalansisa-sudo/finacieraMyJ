@@ -10,6 +10,7 @@ import AdminEstadisticas from './pages/AdminEstadisticas';
 import AdminBanner from './pages/AdminBanner';
 import AdminEquipo from './pages/AdminEquipo';
 import AdminLiderazgo from './pages/AdminLiderazgo';
+import AdminPromoFlyer from './pages/AdminPromoFlyer';
 
 export default function AdminLayout() {
   return (
@@ -39,6 +40,7 @@ export default function AdminLayout() {
                 <Route path="banner" element={<AdminBanner />} />
                 <Route path="equipo" element={<AdminEquipo />} />
                 <Route path="liderazgo" element={<AdminLiderazgo />} />
+                <Route path="promo" element={<AdminPromoFlyer />} />
                 <Route path="*" element={<Navigate to="/admin" replace />} />
               </Routes>
             </main>

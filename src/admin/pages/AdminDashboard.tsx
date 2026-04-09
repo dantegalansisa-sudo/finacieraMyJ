@@ -8,6 +8,7 @@ const sections = [
   { to: '/admin/banner', icon: '📢', title: 'Banner Promocional', desc: 'Texto de la barra promocional verde superior' },
   { to: '/admin/equipo', icon: '👥', title: 'Equipo de Trabajo', desc: 'Fotos y datos del equipo que se muestran en la web' },
   { to: '/admin/liderazgo', icon: '👔', title: 'Liderazgo Ejecutivo', desc: 'Foto y datos del presidente y vicepresidenta' },
+  { to: '/admin/promo', icon: '🎯', title: 'Flyer Promocional', desc: 'Sube un flyer cuando tengas una promocion activa' },
 ];
 
 export default function AdminDashboard() {

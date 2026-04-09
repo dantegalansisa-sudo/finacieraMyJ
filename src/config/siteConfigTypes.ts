@@ -81,6 +81,11 @@ export interface Liderazgo {
   vicepresidenta: LiderazgoPersona;
 }
 
+export interface PromoFlyer {
+  activo: boolean;
+  imagenUrl: string;
+}
+
 // Mapa de secciones editables desde el admin
 export interface SiteConfigMap {
   contacto: Contacto;
@@ -90,6 +95,7 @@ export interface SiteConfigMap {
   urgencyBanner: UrgencyBanner;
   equipoTrabajo: EquipoTrabajo;
   liderazgo: Liderazgo;
+  promoFlyer: PromoFlyer;
 }
 
 export type SiteConfigKey = keyof SiteConfigMap;
